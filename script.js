@@ -28,6 +28,8 @@ const insults = [
 // Get DOM elements
 const generateBtn = document.getElementById('generateBtn');
 const resultElement = document.getElementById('result');
+const nameSelect = document.getElementById('nameSelect');
+const selectedNameElement = document.getElementById('selectedName');
 
 // Function to get a random insult
 function getRandomInsult() {
@@ -63,6 +65,16 @@ generateBtn.addEventListener('click', () => {
     // Generate and display random result
     const randomInsult = getRandomInsult();
     displayResult(randomInsult);
+});
+
+// Add event listener for name selection changes
+nameSelect.addEventListener('change', () => {
+    const selectedName = nameSelect.value;
+    selectedNameElement.textContent = selectedName;
+    
+    // Clear the result when name changes
+    resultElement.classList.remove('show');
+    resultElement.textContent = '';
 });
 
 // Optional: Add keyboard support (Enter or Space to generate)
