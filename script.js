@@ -21,7 +21,8 @@ const insults = [
     "Airhead",
     "Dipstick",
     "SGA D Rider",
-    "Dak Hater"
+    "Dak Hater",
+    "Racist"
 ];
 
 // Get DOM elements
